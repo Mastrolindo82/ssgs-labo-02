@@ -18,5 +18,10 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.0.0"
+  },
+  "jest": {
+    "coverageDirectory": "coverage",
+    "collectCoverage": true,
+    "testEnvironment": "node"
   }
 }

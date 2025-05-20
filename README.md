@@ -116,4 +116,11 @@ ssgs-labo-02/
   - Configurazioni di VS Code
   - File temporanei e di sistema (es. `.DS_Store`)
 
+### [feature/add-tests]
+- Creato il branch dedicato per i test unitari.
+- Integrato e configurato Jest per l'esecuzione dei test e la generazione del report di code coverage.
+- Implementati test unitari esaustivi per tutte le funzioni di `stringUtils.js`, coprendo casi standard e casi limite.
+- Ottenuta una copertura del codice (code coverage) del 100% su statements, branches, functions e lines.
+- Aggiornata la documentazione per includere istruzioni sull'esecuzione dei test e sulla coverage.
+
 ---
