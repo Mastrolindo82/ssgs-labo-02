@@ -19,7 +19,7 @@ La CLI mette a disposizione le seguenti operazioni:
 
 1. **Clona il repository**
    ```sh
-   git clone <URL-del-tuo-repository>
+   git clone https://github.com/Mastrolindo82/ssgs-labo-02
    cd ssgs-labo-02
    ```
 
@@ -58,7 +58,7 @@ Nel file `package.json` sono definiti i seguenti script utili:
 
 ## Testing
 
-Il progetto include test unitari per tutte le funzioni principali, implementati con [Jest](https://jestjs.io/).
+Il progetto include test unitari per tutte le funzioni principali, implementati con [Jest].
 
 Per eseguire i test:
 ```sh
