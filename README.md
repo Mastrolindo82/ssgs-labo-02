@@ -123,4 +123,15 @@ ssgs-labo-02/
 - Ottenuta una copertura del codice (code coverage) del 100% su statements, branches, functions e lines.
 - Aggiornata la documentazione per includere istruzioni sull'esecuzione dei test e sulla coverage.
 
+### [ci-workflow-coverage]
+- Aggiunto il file `.github/workflows/ci.yml` per automatizzare l’esecuzione dei test unitari e la generazione del report di code coverage tramite GitHub Actions.
+- Il workflow viene eseguito automaticamente ad ogni push e pull request verso il branch `main`.
+- Il job esegue le seguenti operazioni in sequenza:
+  1. Checkout del repository.
+  2. Setup dell’ambiente Node.js (versione 20).
+  3. Installazione delle dipendenze tramite `npm install`.
+  4. Esecuzione dei test e generazione del report di coverage (`npm run coverage`).
+  5. Upload della cartella `coverage/` come artefatto scaricabile dai risultati del workflow.
+- Il report HTML di code coverage è ora accessibile come artefatto direttamente dalla sezione "Actions" di GitHub.
+
 ---
