@@ -1,19 +1,24 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
 
-# Environments
+# Environment files
 .env
-.venv
-env/
-venv/
+.env.*
 
-# Distribution / packaging
-build/
-dist/
-*.egg-info/
+# Test coverage
+coverage/
+.nyc_output/
+jest-coverage/
 
-# Unit test / coverage reports
-.coverage
-.pytest_cache/
-htmlcov/
+# VS Code settings
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Altri file temporanei
+*.log
