@@ -1,30 +1,119 @@
-# Labo-String: CLI per Utilità su Stringhe
+# Labo-String
 
-Questo progetto fornisce una base per una semplice Command-Line Interface (CLI) Node.js che offre diverse utilità per la manipolazione di stringhe.
+**Labo-String** è una Command-Line Interface (CLI) sviluppata in Node.js che offre utilità per la manipolazione di stringhe. Il progetto è pensato come esercizio pratico per consolidare le best practice di sviluppo, testing e gestione della configurazione in ambiente Node.js.
 
-## Nota Importante per lo Studente - Setup Iniziale del Progetto
+## Funzionalità
 
-Benvenuto/a a `labo-string`!
+La CLI mette a disposizione le seguenti operazioni:
 
-Questo repository è un **template di partenza** per il tuo laboratorio valutato. Come avrai modo di leggere nelle istruzioni del laboratorio, una parte fondamentale del tuo lavoro iniziale (Esercizio 1) consisterà nell'analizzare attentamente la struttura e la configurazione corrente di questo progetto.
+- **Inversione di una stringa**  
+  Restituisce la stringa di input invertita.
+- **Verifica se una stringa è palindroma**  
+  Indica se la stringa fornita è palindroma (uguale letta da sinistra a destra e viceversa).
+- **Troncamento di una stringa**  
+  Tronca la stringa a una lunghezza massima specificata.
+- **Conteggio delle occorrenze di ciascun carattere**  
+  Restituisce un oggetto con il conteggio di ogni carattere presente nella stringa.
 
-**Potresti notare che alcuni aspetti della configurazione iniziale – inclusa questa stessa documentazione (`README.md`), il file `package.json` e la gestione dei file da ignorare (`.gitignore`) – sono stati volutamente lasciati incompleti o potrebbero non seguire tutte le best practice per un progetto Node.js.**
+## Installazione
 
-Il tuo primo compito sarà proprio quello di identificare queste aree di miglioramento e apportare le necessarie correzioni e completamenti, come dettagliato nelle istruzioni del laboratorio, per portare il progetto a uno standard qualitativo superiore.
+1. **Clona il repository**
+   ```sh
+   git clone <URL-del-tuo-repository>
+   cd ssgs-labo-02
+   ```
 
-Buona analisi e buon lavoro!
+2. **Installa le dipendenze**
+   ```sh
+   npm install
+   ```
 
-## Funzionalità Principali (Previste)
+## Utilizzo
 
-* Inversione di una stringa.
-* Verifica se una stringa è palindroma.
-* Troncamento di una stringa a una lunghezza massima specificata.
-* Conteggio delle occorrenze di ciascun carattere in una stringa.
+Esegui la CLI tramite Node.js passando i parametri richiesti:
 
-## Installazione e Avvio
+```sh
+node index.js <numero_funzione> <stringa_input> [parametro_aggiuntivo]
+```
 
-*(Questa sezione dovrà essere completata dallo studente come parte dell'Esercizio 1, includendo i comandi per installare le dipendenze ed eseguire l'applicazione e i test).*
+### Mappatura delle funzioni
+
+| Numero | Funzione                | Parametri aggiuntivi         | Esempio di utilizzo                                 |
+|--------|------------------------|------------------------------|-----------------------------------------------------|
+| 1      | Inverti Stringa        | Nessuno                      | `node index.js 1 "ciao"`                            |
+| 2      | Controlla Palindromo   | Nessuno                      | `node index.js 2 "anna"`                            |
+| 3      | Tronca Stringa         | lunghezza_massima (numero)   | `node index.js 3 "abcdef" 4`                        |
+| 4      | Conta Caratteri        | Nessuno                      | `node index.js 4 "banana"`                          |
+
+## Script disponibili
+
+Nel file `package.json` sono definiti i seguenti script utili:
+
+- `npm start`  
+  Avvia la CLI (puoi modificare lo script per passare i parametri desiderati).
+- `npm test`  
+  Esegue i test unitari.
+- `npm run coverage`  
+  Genera un report di copertura del codice (se configurato con Jest).
+
+## Testing
+
+Il progetto include test unitari per tutte le funzioni principali, implementati con [Jest](https://jestjs.io/).
+
+Per eseguire i test:
+```sh
+npm test
+```
+
+Per generare il report di copertura:
+```sh
+npm run coverage
+```
+
+## Struttura del progetto
+
+```
+ssgs-labo-02/
+├── src/
+│   └── stringUtils.js      # Funzioni di utilità sulle stringhe
+├── test/
+│   └── stringUtils.test.js # Test unitari
+├── index.js                # Entry point della CLI
+├── package.json
+├── .gitignore
+└── README.md
+```
+
+## Best Practice e CI/CD
+
+- Il progetto segue un flusso Git professionale: ogni modifica significativa viene sviluppata su branch dedicati e integrata tramite Pull Request.
+- È consigliato configurare GitHub Actions per automatizzare i test e la generazione dei report di copertura.
+- Il file `.gitignore` è stato aggiornato per escludere file e cartelle non rilevanti dal versionamento.
+
+## Autore
+
+[Leander-Sebastian Lange]
 
 ---
 
-*Suggerimento: Presta particolare attenzione ai requisiti dell'Esercizio 1 del laboratorio per completare e correggere questo README e gli altri file di configurazione.*
+> **Nota:** Questo progetto nasce come esercizio didattico per consolidare le competenze su Node.js, testing, Git e CI/CD.
+
+## aggiornamenti 
+### [fix/initial-setup]
+- Aggiornato il README.md con descrizione dettagliata del progetto, istruzioni di installazione e utilizzo, mappatura delle funzioni e struttura delle cartelle.
+- Aggiornato il file `package.json`:
+  - Migliorata la descrizione.
+  - Impostato `main` su `index.js`.
+  - Aggiunti script: `start`, `test` (Jest), `coverage`.
+  - Aggiunte parole chiave (`keywords`).
+  - Valorizzato il campo `author`.
+  - Aggiunta la dipendenza di sviluppo `jest`.
+- Aggiornato `.gitignore` per includere:
+  - Cartella `node_modules/`
+  - File di log e lock tipici di Node.js
+  - File di ambiente `.env*`
+  - Cartelle di coverage dei test
+  - Configurazioni di VS Code
+  - File temporanei e di sistema (es. `.DS_Store`)
+
+---
