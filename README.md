@@ -97,3 +97,23 @@ ssgs-labo-02/
 ---
 
 > **Nota:** Questo progetto nasce come esercizio didattico per consolidare le competenze su Node.js, testing, Git e CI/CD.
+
+## aggiornamenti 
+### [fix/initial-setup]
+- Aggiornato il README.md con descrizione dettagliata del progetto, istruzioni di installazione e utilizzo, mappatura delle funzioni e struttura delle cartelle.
+- Aggiornato il file `package.json`:
+  - Migliorata la descrizione.
+  - Impostato `main` su `index.js`.
+  - Aggiunti script: `start`, `test` (Jest), `coverage`.
+  - Aggiunte parole chiave (`keywords`).
+  - Valorizzato il campo `author`.
+  - Aggiunta la dipendenza di sviluppo `jest`.
+- Aggiornato `.gitignore` per includere:
+  - Cartella `node_modules/`
+  - File di log e lock tipici di Node.js
+  - File di ambiente `.env*`
+  - Cartelle di coverage dei test
+  - Configurazioni di VS Code
+  - File temporanei e di sistema (es. `.DS_Store`)
+
+---
